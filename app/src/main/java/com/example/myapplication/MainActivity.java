@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         img=findViewById(R.id.imageView);
         // chiến mặt abc
         // chiến mặt thộn ộn ộn
+        //1234567
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
