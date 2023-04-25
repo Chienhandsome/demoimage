@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn=findViewById(R.id.button);
-        img=findViewById(R.id.imageView);
+        btn = findViewById(R.id.button);
+        img = findViewById(R.id.imageView);
         // chiến mặt abc
         // chiến mặt thộn ộn ộn nn
         btn.setOnClickListener(new View.OnClickListener() {
@@ -38,11 +38,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private class LoadImageInterne extends AsyncTask <String , Void, Bitmap> {
-        Bitmap bitmapImg=null;
+
+    private class LoadImageInterne extends AsyncTask<String, Void, Bitmap> {
+        Bitmap bitmapImg = null;
+
         @Override
-        protected Bitmap  doInBackground (String... strings){
-            try{
+        protected Bitmap doInBackground(String... strings) {
+            try {
                 URL url = new URL(strings[0]);
                 InputStream inputStream = url.openConnection().getInputStream();
                 bitmapImg = BitmapFactory.decodeStream(inputStream);
